@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "E-Commerce Platform",
+      "description": "Full-stack e-commerce solution with real-time inventory",
+      "longDescription": "A comprehensive e-commerce platform built with modern technologies. Features include real-time inventory management, secure payment processing, advanced search and filtering, user authentication, admin dashboard, and responsive design. Implemented using microservices architecture for scalability.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Redis"],
+      "category": "web-development",
+      "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "liveUrl": "https://ecommerce-demo.com",
+      "githubUrl": "https://github.com/developer/ecommerce",
+      "featured": true,
+      "position": { "x": 2, "y": 1, "z": 0 },
+      "color": "#3B82F6",
+      "createdAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "project-2",
+      "title": "Task Management App",
+      "description": "Cross-platform mobile app for team collaboration",
+      "longDescription": "A feature-rich task management application designed for teams. Includes real-time collaboration, file sharing, deadline tracking, project analytics, push notifications, and offline sync capabilities. Built with React Native for cross-platform compatibility.",
+      "technologies": ["React Native", "Firebase", "TypeScript", "Redux"],
+      "category": "mobile-app",
+      "image": "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "liveUrl": "https://taskapp-demo.com",
+      "githubUrl": "https://github.com/developer/taskapp",
+      "featured": true,
+      "position": { "x": -2, "y": 0.5, "z": 1 },
+      "color": "#10B981",
+      "createdAt": "2024-02-20T14:15:00.000Z"
+    },
+    {
+      "id": "project-3",
+      "title": "GraphQL API Gateway",
+      "description": "Scalable microservices API with real-time subscriptions",
+      "longDescription": "A robust GraphQL API gateway that unifies multiple microservices. Features include schema stitching, real-time subscriptions, rate limiting, authentication middleware, caching strategies, and comprehensive logging. Deployed using Docker and Kubernetes.",
+      "technologies": ["GraphQL", "Apollo Server", "Docker", "Kubernetes", "PostgreSQL"],
+      "category": "backend-api",
+      "image": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "liveUrl": "https://api-gateway-demo.com",
+      "githubUrl": "https://github.com/developer/graphql-gateway",
+      "featured": false,
+      "position": { "x": 0, "y": -1, "z": 2 },
+      "color": "#EF4444",
+      "createdAt": "2024-03-10T09:45:00.000Z"
+    },
+    {
+      "id": "project-4",
+      "title": "Open Source Design System",
+      "description": "Comprehensive React component library with Storybook",
+      "longDescription": "A production-ready design system and component library used by multiple organizations. Includes 50+ components, comprehensive documentation, accessibility features, theme customization, and automated testing. Published as an npm package with weekly updates.",
+      "technologies": ["React", "TypeScript", "Storybook", "Rollup", "Jest"],
+      "category": "open-source",
+      "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "liveUrl": "https://design-system-demo.com",
+      "githubUrl": "https://github.com/developer/design-system",
+      "featured": true,
+      "position": { "x": 1, "y": 2, "z": -1 },
+      "color": "#8B5CF6",
+      "createdAt": "2024-04-05T16:20:00.000Z"
+    }
+  ],
+  "about": {
+    "bio": "Passionate full-stack developer with 8+ years of experience building scalable web applications. Specialized in modern JavaScript frameworks, cloud architecture, and creating exceptional user experiences. Always exploring new technologies and contributing to open source.",
+    "skills": [
+      { "name": "JavaScript", "level": 95, "color": "#F7DF1E" },
+      { "name": "TypeScript", "level": 90, "color": "#3178C6" },
+      { "name": "React", "level": 92, "color": "#61DAFB" },
+      { "name": "Node.js", "level": 88, "color": "#339933" },
+      { "name": "Python", "level": 85, "color": "#3776AB" },
+      { "name": "AWS", "level": 82, "color": "#FF9900" },
+      { "name": "Docker", "level": 80, "color": "#2496ED" },
+      { "name": "GraphQL", "level": 85, "color": "#E10098" }
+    ],
+    "experience": "8+ years of professional development experience, leading teams and delivering high-impact projects for startups and enterprise clients."
+  },
+  "settings": {
+    "name": "Alex Developer",
+    "title": "Full Stack Developer & Tech Lead",
+    "email": "alex@portfolio.dev",
+    "social": {
+      "github": "alexdeveloper",
+      "linkedin": "alex-developer",
+      "twitter": "alexdevs"
+    }
+  }
+}
