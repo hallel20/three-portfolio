@@ -3,9 +3,9 @@
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, X } from 'lucide-react';
-import { Project } from '@/lib/cms';
+import { ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
+import { Project } from '@/lib/types';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -23,14 +23,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
           <DialogTitle className="text-2xl font-bold text-white">
             {project.title}
           </DialogTitle>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onClose}
-            className="text-gray-400 hover:text-white"
-          >
-            <X className="w-5 h-5" />
-          </Button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

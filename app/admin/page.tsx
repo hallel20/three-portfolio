@@ -147,6 +147,7 @@ export default function AdminPage() {
                   >
                     <div className="flex items-center space-x-4">
                       <div className="w-16 h-16 rounded-lg overflow-hidden bg-muted">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
                           src={project.image} 
                           alt={project.title}
