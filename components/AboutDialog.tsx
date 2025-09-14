@@ -24,7 +24,7 @@ export default function AboutDialog() {
           About
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-gray-900/95 border-cyan-400/30 text-white backdrop-blur-md max-w-2xl">
+      <DialogContent className="bg-gray-900/95 border-cyan-400/30 text-white max-h-[90vh] overflow-y-auto backdrop-blur-md max-w-2xl">
         <DialogHeader>
           <DialogTitle className="text-2xl text-cyan-400">About Me</DialogTitle>
         </DialogHeader>

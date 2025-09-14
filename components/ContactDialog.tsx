@@ -23,7 +23,7 @@ export default function ContactDialog() {
           Contact
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-gray-900/95 border-cyan-400/30 text-white backdrop-blur-md">
+      <DialogContent className="bg-gray-900/95 border-cyan-400/30 text-white max-h-[90vh] overflow-y-auto backdrop-blur-md">
         <DialogHeader>
           <DialogTitle className="text-2xl text-cyan-400">
             Get In Touch

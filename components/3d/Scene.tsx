@@ -4,8 +4,11 @@ import React, { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { LoadingFallback } from "./LoadingFallback";
 import { FloatingText } from "./FloatingText";
-import { ParticleBackground } from "./ParticleBackground";
 import { ProjectCards } from "./ProjectCards";
+import { AdvancedParticleSystem, CodeParticleSystem } from "./AdvancedParticleSystem";
+import { HolographicProjectDisplay } from "./HolographicProjectDisplay";
+import { SkillVisualization } from "./SkillVisualization";
+import { FloatingCodeElements } from "./FloatingCodeElements";
 
 interface SceneProps {
   className?: string;
@@ -66,22 +69,37 @@ export default function Scene({ className = "" }: SceneProps) {
 
     rendererRef.current = renderer;
 
-    // Lighting setup
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+    // Enhanced lighting setup
+    const ambientLight = new THREE.AmbientLight(0x404080, 0.4);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
     directionalLight.position.set(10, 10, 5);
     if (!performanceMode) {
       directionalLight.castShadow = true;
-      directionalLight.shadow.mapSize.width = 1024;
-      directionalLight.shadow.mapSize.height = 1024;
+      directionalLight.shadow.mapSize.width = 2048;
+      directionalLight.shadow.mapSize.height = 2048;
+      directionalLight.shadow.camera.near = 0.1;
+      directionalLight.shadow.camera.far = 50;
+      directionalLight.shadow.camera.left = -20;
+      directionalLight.shadow.camera.right = 20;
+      directionalLight.shadow.camera.top = 20;
+      directionalLight.shadow.camera.bottom = -20;
     }
     scene.add(directionalLight);
 
-    const pointLight = new THREE.PointLight(0x3b82f6, 0.5);
-    pointLight.position.set(-10, -10, -10);
-    scene.add(pointLight);
+    // Multiple colored point lights for atmosphere
+    const pointLight1 = new THREE.PointLight(0x3b82f6, 0.8, 30);
+    pointLight1.position.set(-10, 5, -10);
+    scene.add(pointLight1);
+
+    const pointLight2 = new THREE.PointLight(0x10b981, 0.6, 25);
+    pointLight2.position.set(10, -5, 10);
+    scene.add(pointLight2);
+
+    const pointLight3 = new THREE.PointLight(0xf59e0b, 0.4, 20);
+    pointLight3.position.set(0, 10, 0);
+    scene.add(pointLight3);
 
     // Environment setup (simple background)
     const envGeometry = new THREE.SphereGeometry(100, 32, 32);
@@ -277,13 +295,27 @@ export default function Scene({ className = "" }: SceneProps) {
       />
       {isLoading && <LoadingFallback />}
 
-      {/* Component integrations */}
+      {/* Enhanced Component integrations */}
       <FloatingText
         scene={sceneRef.current}
         performanceMode={performanceMode}
       />
-      <ParticleBackground
+      
+      {/* Advanced particle systems replace the basic one */}
+      <AdvancedParticleSystem
         scene={sceneRef.current}
+        performanceMode={performanceMode}
+      />
+      <CodeParticleSystem
+        scene={sceneRef.current}
+        performanceMode={performanceMode}
+      />
+      
+      {/* Enhanced project displays */}
+      <HolographicProjectDisplay
+        scene={sceneRef.current}
+        camera={cameraRef.current}
+        canvas={canvasRef.current}
         performanceMode={performanceMode}
       />
       <ProjectCards
@@ -291,6 +323,16 @@ export default function Scene({ className = "" }: SceneProps) {
         camera={cameraRef.current}
         performanceMode={performanceMode}
         canvas={canvasRef.current}
+      />
+      
+      {/* Skill and code visualizations */}
+      <SkillVisualization
+        scene={sceneRef.current}
+        performanceMode={performanceMode}
+      />
+      <FloatingCodeElements
+        scene={sceneRef.current}
+        performanceMode={performanceMode}
       />
 
       {/* Performance stats overlay (dev only) */}
